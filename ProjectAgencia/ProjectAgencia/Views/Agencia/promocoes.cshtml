@@ -1,0 +1,149 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Promoções</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="~/bootstrap.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background: orangered;
+            height: 70px;
+            width: 100%;
+        }
+
+        label.logo {
+            text-decoration: underline;
+            color: white;
+            font-size: 35px;
+            line-height: 70px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 22px;
+            margin-top: -3px;
+        }
+
+            nav ul li {
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
+            }
+
+                nav ul li a {
+                    color: black;
+                    font-size: 17px;
+                    padding: 7px 13px;
+                    border-radius: 3px;
+                    text-transform: uppercase;
+                }
+
+        a.active, a:hover {
+            background: aliceblue;
+            transition: .5s;
+        }
+
+        .Fotos img {
+            width: 400px;
+            height: 220px;
+            border: solid 1px black;
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+        }
+
+        .Fotos {
+            background-color: orangered;
+            height: 220px;
+            margin-bottom: 20px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        h1 {
+            margin-left: 810px;
+        }
+
+        h2 {
+            position: absolute;
+            margin-top: -31px;
+            letter-spacing: 10px;
+            background: yellow;
+            border-top-right-radius: 10px;
+        }
+
+        h3 {
+            color: white;
+            position: absolute;
+            margin-top: -130px;
+            margin-left: 600px;
+            font-size: 1.90em;
+        }
+
+        #Promo {
+            background-image: radial-gradient(aliceblue, whitesmoke);
+        }
+
+        footer {
+            float: inline-end;
+            background-color: #1C1C1C;
+            margin-top: 52px;
+            height: 37px;
+            color: white;
+        }
+
+            footer h1 {
+                margin-left: 760px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <label class="logo">Agência Sem fronteiras</label>
+            <ul>
+                <li>@Html.ActionLink("Home", "index", "Agencia")</li>
+                <li>@Html.ActionLink("Destinos", "destinos", "Agencia")</li>
+                <li>@Html.ActionLink("Promoções", "promocoes", "Agencia")</li>
+                <li>@Html.ActionLink("Contato", "contato", "Agencia")</li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Promo">
+        <div class="Fotos">
+            <img src="https://p4.wallpaperbetter.com/wallpaper/462/571/687/cities-london-big-ben-england-night-hd-wallpaper-preview.jpg" alt="">
+            <h2>Inglaterra</h2>
+            <h3>Viaje para a Inglaterra com até 30% de desconto nesse final de ano!</h3>
+        </div>
+        <div class="Fotos">
+            <img src="https://images5.alphacoders.com/555/thumb-1920-555090.jpg" alt="">
+            <h2>Austrália</h2>
+            <h3>Austrália e toda a sua beleza esperam por você com até 40% de desconto!</h3>
+        </div>
+        <div class="Fotos">
+            <img src="https://www.teahub.io/photos/full/22-229093_toronto-wallpaper-hd.jpg" alt="">
+            <h2>Canadá</h2>
+            <h3>Canadá quer muito lhe ver, venha até ela e tenha um encontro especial com 50% de desconto!</h3>
+        </div>
+    </section>
+    <footer>
+        <h1>Agência de Viagens.com</h1>
+    </footer>
+</body>
+</html>

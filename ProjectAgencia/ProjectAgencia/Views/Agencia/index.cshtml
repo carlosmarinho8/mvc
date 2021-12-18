@@ -1,0 +1,193 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Seja bem Vindo a agência de viagens</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="~/bootstrap.css">
+    <style>
+		font-face {
+	font-family: 'Viagens';
+	src: url(RNS_Camelia.otf);
+}
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: montserrat;
+}
+        #Section_Bem_Vindo {
+            width: 100%;
+            height: 600px;
+            background-image: url("https://p4.wallpaperbetter.com/wallpaper/422/981/158/beautiful-sunset-wallpaper-preview.jpg");
+            background-position: center;
+            background-size: 100%;
+        }
+#Section_Div
+{
+	background-image: linear-gradient(yellow, orangered);
+	position: absolute;
+	margin-top: 250px;
+	margin-left: 350px;
+	border-radius: 50px;
+	width: 1200px;
+}
+#Imagens, div img
+{
+	width: 600px;
+	display: inline-flex;
+	padding-left: 35px;
+	padding-bottom: 40px;
+	height: 400px;
+}
+#Imagens
+{
+	margin-top: 50px;
+}
+h1
+{
+	font-size: 4em;
+	font-family: 'Viagens';
+	text-align: center;
+}
+p
+{
+	position: absolute;
+	display: block;
+	margin-top: -100px;
+	margin-left: 100px;
+	color: aliceblue;
+	font-size: 22px;
+	background-color: rgba(105,89,205,0.60);
+}
+nav
+{
+	background: orangered;
+	height: 80px;
+	width: 100%;
+}
+label.logo {
+	text-decoration: underline;
+	color: white;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+nav ul {
+	float: right;
+	margin-right: 20px;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a {
+	color: black;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+a.active, a:hover {
+	background: aliceblue;
+	transition: .5s;
+}
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check {
+	display: none;
+}
+media (max-width: 952px){
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+media (max-width: 858px){
+	.checkbtn {
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #2b2b2e;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	a:hover, a.active {
+		background: none;
+		color: #171618;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <label class="logo">Agência de viagens</label>
+            <ul>
+                <li>@Html.ActionLink("Home", "index", "Agencia")</li>
+                <li>@Html.ActionLink("Destinos", "destinos", "Agencia")</li>
+                <li>@Html.ActionLink("Promoções", "promocoes", "Agencia")</li>
+                <li>@Html.ActionLink("Contato", "contato", "Agencia")</li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Section_Bem_Vindo">
+        <div id="Section_Div">
+            <h1>Seja bem-vindo(a)s a Agência de Viagens sem Fronteiras</h1>
+        </div>
+    </section>
+    <section id="Imagens">
+        <div>
+            <img src="https://escolaeducacao.com.br/wp-content/uploads/2019/08/len%C3%A7ois-maranhenses.jpg" alt="">
+            <p>Lençóis Maranhenses, Maranhão</p>
+        </div>
+        <div>
+            <img src="https://cdn.wallpapersafari.com/36/70/MbYuWN.jpg" alt="">
+            <p>Pelourinho, Bahia</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/originals/11/f2/9b/11f29bee4e106b0be0434cf525585083.jpg" alt="">
+            <p>Jardim Botânico, Curitiba</p>
+        </div>
+    </section>
+
+</body>
+</html>
